@@ -1,0 +1,4 @@
+case_id,use_case,description,domain,data_types,affects_individuals,model_source,user_facing,human_in_loop,expected_tier,labeled_by,label_date,classifier_tier,classifier_status,overrides,match,under_tiered,notes
+V01,,,,,,,,,,,,,,,,,
+V02,,,,,,,,,,,,,,,,,
+V03,,,,,,,,,,,,,,,,,

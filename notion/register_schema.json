@@ -1,0 +1,300 @@
+{
+  "title": [
+    {
+      "type": "text",
+      "text": {
+        "content": "AI Use-Case Register"
+      }
+    }
+  ],
+  "is_inline": true,
+  "properties": {
+    "Use Case": {
+      "title": {}
+    },
+    "Status": {
+      "select": {
+        "options": [
+          {
+            "name": "CLASSIFIED",
+            "color": "green"
+          },
+          {
+            "name": "NEEDS_REVIEW",
+            "color": "orange"
+          }
+        ]
+      }
+    },
+    "EU AI Act Tier": {
+      "select": {
+        "options": [
+          {
+            "name": "prohibited",
+            "color": "red"
+          },
+          {
+            "name": "high",
+            "color": "orange"
+          },
+          {
+            "name": "limited",
+            "color": "yellow"
+          },
+          {
+            "name": "minimal",
+            "color": "green"
+          },
+          {
+            "name": "unknown",
+            "color": "gray"
+          }
+        ]
+      }
+    },
+    "Confidence": {
+      "select": {
+        "options": [
+          {
+            "name": "low"
+          },
+          {
+            "name": "medium"
+          },
+          {
+            "name": "high"
+          }
+        ]
+      }
+    },
+    "Review Decision": {
+      "select": {
+        "options": [
+          {
+            "name": "Pending",
+            "color": "gray"
+          },
+          {
+            "name": "Approved",
+            "color": "green"
+          },
+          {
+            "name": "Rejected",
+            "color": "red"
+          },
+          {
+            "name": "Reclassified",
+            "color": "purple"
+          }
+        ]
+      }
+    },
+    "Reviewer": {
+      "people": {}
+    },
+    "Review Date": {
+      "date": {}
+    },
+    "Tier Rationale": {
+      "rich_text": {}
+    },
+    "Domain": {
+      "select": {
+        "options": [
+          {
+            "name": "credit"
+          },
+          {
+            "name": "employment"
+          },
+          {
+            "name": "insurance"
+          },
+          {
+            "name": "healthcare"
+          },
+          {
+            "name": "marketing"
+          },
+          {
+            "name": "internal_ops"
+          },
+          {
+            "name": "other"
+          }
+        ]
+      }
+    },
+    "Business Owner": {
+      "rich_text": {}
+    },
+    "Model Source": {
+      "select": {
+        "options": [
+          {
+            "name": "in-house"
+          },
+          {
+            "name": "vendor SaaS"
+          },
+          {
+            "name": "GenAI API"
+          },
+          {
+            "name": "open-weight"
+          }
+        ]
+      }
+    },
+    "User Facing": {
+      "select": {
+        "options": [
+          {
+            "name": "internal"
+          },
+          {
+            "name": "customer"
+          }
+        ]
+      }
+    },
+    "Affects Individuals": {
+      "select": {
+        "options": [
+          {
+            "name": "Yes"
+          },
+          {
+            "name": "No"
+          }
+        ]
+      }
+    },
+    "Human in Loop": {
+      "select": {
+        "options": [
+          {
+            "name": "Yes"
+          },
+          {
+            "name": "No"
+          }
+        ]
+      }
+    },
+    "Data Types": {
+      "multi_select": {
+        "options": [
+          {
+            "name": "PII"
+          },
+          {
+            "name": "PHI"
+          },
+          {
+            "name": "financial"
+          },
+          {
+            "name": "none"
+          }
+        ]
+      }
+    },
+    "Control Themes": {
+      "multi_select": {
+        "options": [
+          {
+            "name": "impact"
+          },
+          {
+            "name": "lifecycle"
+          },
+          {
+            "name": "data"
+          },
+          {
+            "name": "transparency"
+          },
+          {
+            "name": "human_oversight"
+          },
+          {
+            "name": "third_party"
+          }
+        ]
+      }
+    },
+    "ISO 42001 Annex A": {
+      "multi_select": {
+        "options": [
+          {
+            "name": "A.5"
+          },
+          {
+            "name": "A.6"
+          },
+          {
+            "name": "A.7"
+          },
+          {
+            "name": "A.8"
+          },
+          {
+            "name": "A.9"
+          },
+          {
+            "name": "A.10"
+          }
+        ]
+      }
+    },
+    "NIST AI RMF Focus": {
+      "multi_select": {
+        "options": [
+          {
+            "name": "GOVERN"
+          },
+          {
+            "name": "MAP"
+          },
+          {
+            "name": "MEASURE"
+          },
+          {
+            "name": "MANAGE"
+          }
+        ]
+      }
+    },
+    "Key Risks": {
+      "rich_text": {}
+    },
+    "Open Questions": {
+      "rich_text": {}
+    },
+    "Overrides": {
+      "rich_text": {}
+    },
+    "Rule Additions": {
+      "rich_text": {}
+    },
+    "Error": {
+      "rich_text": {}
+    },
+    "Submitted At": {
+      "date": {}
+    },
+    "Classifier Model": {
+      "rich_text": {}
+    },
+    "Prompt Version": {
+      "rich_text": {}
+    },
+    "n8n Execution ID": {
+      "rich_text": {}
+    },
+    "Raw LLM Output": {
+      "rich_text": {}
+    }
+  }
+}
