@@ -1,3 +1,5 @@
+![AI Use-Case Intake & Risk Classifier](docs/banner.png)
+
 # AI Use-Case Intake & Risk Classifier
 
 An n8n workflow that turns an AI use-case intake form into a **risk-triaged, auditable register entry** in Notion, using any LLM you choose (local or cloud) plus deterministic governance rules.
