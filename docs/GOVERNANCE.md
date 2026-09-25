@@ -52,7 +52,7 @@ The model names the core functions (GOVERN, MAP, MEASURE, MANAGE) needing the mo
 - **Human oversight of the tool itself:** the classifier is an AI system too. Validate it, version its prompt, and monitor reviewer overrides (see [TESTING.md](TESTING.md)).
 
 ## Known limitations
-- Three test cases prove the pipeline, not accuracy. Validate before production use.
+- The automated tests prove the rules behave as documented; the three smoke cases prove the pipeline. Neither measures classification accuracy. Validate before production use.
 - Small models under-report domain-specific risks (e.g., misstated loan terms as consumer-protection exposure). Add domain hints to the prompt's CONTEXT or use a stronger model.
 - Intake quality limits output quality: "no customer data" is not "no personal data" (meeting transcripts contain employee PII). Consider stricter field wording.
 - The Notion register is editable, so it is not tamper-evident. Keep n8n execution history and periodic exports as the secondary record.

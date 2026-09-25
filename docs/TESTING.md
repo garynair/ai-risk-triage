@@ -1,5 +1,19 @@
 # Testing and validation
 
+## Automated rule tests
+The deterministic rules and the Notion payload are tested without n8n, Notion or a model. The tests load the JavaScript directly from the Code nodes in `workflow/ai-usecase-classifier.json`, so they test the workflow you import, not a copy of it.
+
+```bash
+node --test    # Node 22+
+```
+
+| File | Covers |
+|---|---|
+| `tests/rules.test.mjs` | The three smoke cases below, the tier floor for each high-risk domain, the human-oversight override, third-party and sensitive-data additions, status routing, Annex A mapping, malformed or fenced model output, a prompt-injection attempt, and the Notion properties, traceability fields and 2,000-character limit |
+| `tests/workflow.test.mjs` | Node connections, pipeline order, no committed credentials or database IDs, prompt guardrails |
+
+Model output is supplied by the test, so these tests prove the rules behave as documented in [GOVERNANCE.md](GOVERNANCE.md). They do not measure classification accuracy; for that, use the validation method below. The tests run in GitHub Actions on every push.
+
 ## Smoke tests
 Submit each case in [tests/test-cases.md](../tests/test-cases.md). Expected results:
 

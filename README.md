@@ -2,6 +2,8 @@
 
 # AI Use-Case Intake & Risk Classifier
 
+[![tests](https://github.com/garynair/ai-risk-triage/actions/workflows/test.yml/badge.svg)](https://github.com/garynair/ai-risk-triage/actions/workflows/test.yml)
+
 An n8n workflow that turns an AI use-case intake form into a **risk-triaged, auditable register entry** in Notion, using any LLM you choose (local or cloud) plus deterministic governance rules.
 
 ```mermaid
@@ -31,6 +33,7 @@ flowchart LR
 2. **Every high/prohibited, overridden, or low-confidence result goes to human review.**
 3. **Model-agnostic.** Swap the chat-model node; nothing else changes. Run fully local (Ollama) when intake data is sensitive.
 4. **Auditable.** Each entry records which model and prompt version produced it and links back to the n8n execution.
+5. **Tested.** Automated tests run the rules straight from the workflow export on every push. Run them locally with `node --test` (see [docs/TESTING.md](docs/TESTING.md)).
 
 ## Quick start
 
@@ -54,7 +57,9 @@ docs/GOVERNANCE.md                    How tiers, rules, and framework mappings w
 docs/TESTING.md                       Test cases and a validation method
 docs/SECURITY.md                      Token handling, data residency, prompt injection
 docs/TROUBLESHOOTING.md               Known issues and fixes
-tests/                                Test cases + validation template
+tests/*.test.mjs                      Automated rule and workflow tests (node --test)
+tests/test-cases.md                   Manual smoke-test cases
+tests/validation-template.csv         Template for a labeled validation set
 ```
 
 ## Frameworks referenced
