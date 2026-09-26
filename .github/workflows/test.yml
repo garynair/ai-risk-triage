@@ -18,3 +18,7 @@ jobs:
           node-version: 22
       - name: Validate workflow JSON and run rule tests
         run: node --test
+      - name: Verify reproducible sample artifact
+        run: |
+          node scripts/generate-sample-run.mjs
+          git diff --exit-code -- docs/sample-run.json

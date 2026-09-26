@@ -1,0 +1,358 @@
+{
+  "artifact_type": "deterministic_test_harness_sample",
+  "disclaimer": "Synthetic evidence generated without a live model, n8n or Notion. This proves rule and payload behavior, not model accuracy.",
+  "regenerate": "node scripts/generate-sample-run.mjs",
+  "intake": {
+    "use_case": "Loan pre-approval scoring",
+    "description": "Score applicants for loan pre-approval using income, credit and identity data.",
+    "business_owner": "Consumer Lending",
+    "domain": "credit",
+    "data_types": [
+      "PII",
+      "financial"
+    ],
+    "affects_individuals": "Yes",
+    "model_source": "in-house",
+    "user_facing": "customer",
+    "human_in_loop": "No",
+    "submittedAt": "2026-09-26T00:00:00Z"
+  },
+  "mocked_llm_draft": {
+    "eu_ai_act_tier": "minimal",
+    "tier_rationale": "The model incorrectly treats the recommendation as low impact.",
+    "nist_rmf_focus": [
+      {
+        "function": "MAP",
+        "reason": "Document the decision context and affected people."
+      }
+    ],
+    "control_themes": [
+      "impact"
+    ],
+    "key_risks": [
+      "Incorrect eligibility recommendation"
+    ],
+    "open_questions": [
+      "What evidence supports the score?"
+    ],
+    "confidence": "high"
+  },
+  "rules_output": {
+    "status": "NEEDS_REVIEW",
+    "overrides": [
+      "Rule: individual-impacting decision in Annex III-type domain",
+      "Rule: no human in loop"
+    ],
+    "additions": [
+      "Rule: sensitive data declared"
+    ],
+    "eu_ai_act_tier": "high",
+    "tier_rationale": "The model incorrectly treats the recommendation as low impact.",
+    "nist_rmf_focus": [
+      {
+        "function": "MAP",
+        "reason": "Document the decision context and affected people."
+      }
+    ],
+    "control_themes": [
+      "impact",
+      "human_oversight",
+      "data"
+    ],
+    "key_risks": [
+      "Incorrect eligibility recommendation"
+    ],
+    "open_questions": [
+      "What evidence supports the score?"
+    ],
+    "confidence": "high",
+    "iso42001_annex_a": [
+      "A.5",
+      "A.9",
+      "A.7"
+    ],
+    "intake": {
+      "use_case": "Loan pre-approval scoring",
+      "description": "Score applicants for loan pre-approval using income, credit and identity data.",
+      "business_owner": "Consumer Lending",
+      "domain": "credit",
+      "data_types": [
+        "PII",
+        "financial"
+      ],
+      "affects_individuals": "Yes",
+      "model_source": "in-house",
+      "user_facing": "customer",
+      "human_in_loop": "No",
+      "submittedAt": "2026-09-26T00:00:00Z"
+    },
+    "note": "Triage signal, not a legal determination"
+  },
+  "notion_request_body": {
+    "parent": {
+      "database_id": "PASTE_DATABASE_ID_HERE"
+    },
+    "properties": {
+      "Use Case": {
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Loan pre-approval scoring"
+            }
+          }
+        ]
+      },
+      "Status": {
+        "select": {
+          "name": "NEEDS_REVIEW"
+        }
+      },
+      "EU AI Act Tier": {
+        "select": {
+          "name": "high"
+        }
+      },
+      "Confidence": {
+        "select": {
+          "name": "high"
+        }
+      },
+      "Review Decision": {
+        "select": {
+          "name": "Pending"
+        }
+      },
+      "Tier Rationale": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "The model incorrectly treats the recommendation as low impact."
+            }
+          }
+        ]
+      },
+      "Domain": {
+        "select": {
+          "name": "credit"
+        }
+      },
+      "Business Owner": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Consumer Lending"
+            }
+          }
+        ]
+      },
+      "Model Source": {
+        "select": {
+          "name": "in-house"
+        }
+      },
+      "User Facing": {
+        "select": {
+          "name": "customer"
+        }
+      },
+      "Affects Individuals": {
+        "select": {
+          "name": "Yes"
+        }
+      },
+      "Human in Loop": {
+        "select": {
+          "name": "No"
+        }
+      },
+      "Data Types": {
+        "multi_select": [
+          {
+            "name": "PII"
+          },
+          {
+            "name": "financial"
+          }
+        ]
+      },
+      "Control Themes": {
+        "multi_select": [
+          {
+            "name": "impact"
+          },
+          {
+            "name": "human_oversight"
+          },
+          {
+            "name": "data"
+          }
+        ]
+      },
+      "ISO 42001 Annex A": {
+        "multi_select": [
+          {
+            "name": "A.5"
+          },
+          {
+            "name": "A.9"
+          },
+          {
+            "name": "A.7"
+          }
+        ]
+      },
+      "NIST AI RMF Focus": {
+        "multi_select": [
+          {
+            "name": "MAP"
+          }
+        ]
+      },
+      "Key Risks": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "• Incorrect eligibility recommendation"
+            }
+          }
+        ]
+      },
+      "Open Questions": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "• What evidence supports the score?"
+            }
+          }
+        ]
+      },
+      "Overrides": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "• Rule: individual-impacting decision in Annex III-type domain\n• Rule: no human in loop"
+            }
+          }
+        ]
+      },
+      "Rule Additions": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "• Rule: sensitive data declared"
+            }
+          }
+        ]
+      },
+      "Error": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": ""
+            }
+          }
+        ]
+      },
+      "Submitted At": {
+        "date": {
+          "start": "2026-09-26T00:00:00Z"
+        }
+      },
+      "Classifier Model": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "llama3.2:3b"
+            }
+          }
+        ]
+      },
+      "Prompt Version": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "v1"
+            }
+          }
+        ]
+      },
+      "n8n Execution ID": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "test-exec-1"
+            }
+          }
+        ]
+      },
+      "Raw LLM Output": {
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "{\"eu_ai_act_tier\":\"minimal\",\"tier_rationale\":\"The model incorrectly treats the recommendation as low impact.\",\"nist_rmf_focus\":[{\"function\":\"MAP\",\"reason\":\"Document the decision context and affected people.\"}],\"control_themes\":[\"impact\"],\"key_risks\":[\"Incorrect eligibility recommendation\"],\"open_questions\":[\"What evidence supports the score?\"],\"confidence\":\"high\"}"
+            }
+          }
+        ]
+      }
+    },
+    "children": [
+      {
+        "object": "block",
+        "type": "callout",
+        "callout": {
+          "icon": {
+            "emoji": "⚠️"
+          },
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Automated triage signal, not a legal determination. Triage signal, not a legal determination"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "object": "block",
+        "type": "heading_3",
+        "heading_3": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Description (as submitted)"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "object": "block",
+        "type": "paragraph",
+        "paragraph": {
+          "rich_text": [
+            {
+              "type": "text",
+              "text": {
+                "content": "Score applicants for loan pre-approval using income, credit and identity data."
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

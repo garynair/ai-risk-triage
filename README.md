@@ -27,6 +27,8 @@ flowchart LR
 
 > ⚠️ **Triage signal, not a legal determination.** Outputs support human reviewers; they do not replace legal or compliance judgment.
 
+**Inspect the evidence:** [Reproducible synthetic sample run](docs/SAMPLE_RUN.md) shows a mocked model under-tiering a loan decision, followed by deterministic correction to `high` risk and `NEEDS_REVIEW`.
+
 ## Design principles
 
 1. **Rules decide what can be decided from the form; the model handles judgment.** A high-risk domain + impact on individuals is *always* `high`, whatever the model says. Rules can raise severity, never lower it.
@@ -55,8 +57,11 @@ docs/SETUP.md                         Step-by-step setup
 docs/MODELS.md                        Using Ollama, OpenAI, Anthropic, Gemini, OpenRouter, etc.
 docs/GOVERNANCE.md                    How tiers, rules, and framework mappings work - and their limits
 docs/TESTING.md                       Test cases and a validation method
+docs/SAMPLE_RUN.md                    Reproducible synthetic sample and evidence boundary
+docs/sample-run.json                  Generated rules output and Notion request body
 docs/SECURITY.md                      Token handling, data residency, prompt injection
 docs/TROUBLESHOOTING.md               Known issues and fixes
+scripts/generate-sample-run.mjs       Regenerates docs/sample-run.json from the workflow code
 tests/*.test.mjs                      Automated rule and workflow tests (node --test)
 tests/test-cases.md                   Manual smoke-test cases
 tests/validation-template.csv         Template for a labeled validation set
